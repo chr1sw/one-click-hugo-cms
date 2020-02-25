@@ -1,0 +1,75 @@
+{{ define "main" }}
+
+{{ partial "jumbotron-menu" (dict "imageUrl" .Params.image "title" .Title) }}
+
+<div class="mw7 mb6 center ph3 pt4">
+
+  <h1 class="f3">Snacks & Sides</h1><br />
+
+  {{ range $index, $element := .Params.snacks }}
+      {{ partial "menu-item" $element }}
+  {{ end }}
+
+<hr class="mt4"/>
+  <br />
+
+  <h1 class="f3">Sandwiches</h1>
+  <br />
+
+  {{ range $index, $element := .Params.sandwiches }}
+      {{ partial "menu-item" $element }}
+  {{ end }}
+
+  <hr class="mt4"/>
+  <br />
+
+  <h1 class="f3">Burgers</h1>
+  <br />
+
+  {{ range $index, $element := .Params.burgers }}
+      {{ partial "menu-item" $element }}
+  {{ end }}
+
+  <hr class="mt4"/>
+  <br />
+
+  <h1 class="f3">Salads</h1>
+  <br />
+
+  {{ range $index, $element := .Params.salads }}
+      {{ partial "menu-item" $element }}
+  {{ end }}
+
+  <hr class="mt4"/>
+  <br />
+
+  <h1 class="f3">Brunch</h1>
+  <br />
+
+  {{ range $index, $element := .Params.brunch }}
+      {{ partial "menu-item" $element }}
+  {{ end }}
+
+  <hr class="mt4"/>
+  <br />
+
+  <h1 class="f3">Dessert</h1>
+  <br />
+
+  {{ range $index, $element := .Params.dessert }}
+      {{ partial "menu-item" $element }}
+  {{ end }}
+
+  <hr class="mt4"/>
+  <br />
+
+  <h1 class="f3">Beverages</h1>
+  <br />
+
+  {{ range $index, $element := .Params.beverages }}
+      {{ partial "menu-item" $element }}
+  {{ end }}
+
+</div>
+
+{{ end }}

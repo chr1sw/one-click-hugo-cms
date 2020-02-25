@@ -2,12 +2,16 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
 
-{{ partial "short-text" .Params.blurb}}
+{{ partial "store-info" .Params.info }}
 
-{{ partial "2-up" .Params }}
+{{ partial "news" .Params.news }}
 
-{{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
+{{ partial "menu-section" (dict "heading" .Params.food.heading "text" .Params.food.text "buttonText" "See Menu" "buttonLink" "/menu") }}
 
-{{ partial "blog" . }}
+{{ partial "products-section" (dict "heading" .Params.products.heading "text" .Params.products.text "buttonText" "Read More" "buttonLink" "/products") }}
+
+{{ partial "values-section" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read More" "buttonLink" "/values") }}
+
+{{ partial "farms-section" (dict "heading" .Params.farms.heading "text" .Params.farms.text "buttonText" "Read More" "buttonLink" "/farms") }}
 
 {{ end }}
